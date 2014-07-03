@@ -1,4 +1,4 @@
-Clojure Sample with MongoDB
+Clojure Sample with Postgres
 =====================
 
-Simple Clojure app using clojure.test framework and Monger client for MongoDB.
+Simple Clojure app using clojure.test framework and PostgreSQL.

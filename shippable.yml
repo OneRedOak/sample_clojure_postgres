@@ -4,14 +4,15 @@ language: clojure
 lein:
   - lein2
 
-# Services used by app
-services:
-  - mongodb
+# Addons used by app
+addons:
+  postgresql: "9.3"
 
-# Create directories for test and coverage reports
+# Create directories for test and coverage reports; Create 'test' Postgres database
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
+  - psql -c 'CREATE DATABASE test;' -U postgres
 
 # Running the test with Leiningen
 script:

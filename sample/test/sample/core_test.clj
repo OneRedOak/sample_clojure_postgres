@@ -2,6 +2,8 @@
   (:require [clojure.test :refer :all]
             [sample.core :refer :all]))
 
+(use 'clojure.tools.logging)
+
 (deftest a-test
-  (testing "Simple MongoDB query"
-    (is (= "Lennon" (-main "John")))))
+  (testing "Simple Postges query"
+    (is (.contains (-main "lindsaybluth") "lindsay@bluth.com"))))
